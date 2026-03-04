@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact | HobbyIoT</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+<div class="logo">HobbyIoT</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="join.html">Join Us</a>
+</nav>
+</header>
+
+<div class="container">
+<h2>Contact & Store</h2>
+
+<div class="card">
+<p>Main collaboration happens through GitHub issues and discussions.</p>
+</div>
+
+<div class="card">
+<p>
+Official hardware is available via the HobbyIoT webstore
+at the Elecrow Partner Seller platform.
+</p>
+</div>
+
+</div>
+
+<footer>© 2026 HobbyIoT</footer>
+</body>
+</html>
