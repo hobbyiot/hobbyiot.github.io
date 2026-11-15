@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HobbyIoT NET – MQTT-SN over 802.15.4 | HobbyIoT</title>
+<meta name="description" content="HobbyIoT NET: an MQTT-SN implementation over 802.15.4 with an Arduino/ESP8266 gateway bridging to MQTT.">
+<link rel="icon" type="image/png" href="../favicon.png">
+<meta name="theme-color" content="#0000ff">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="../"><img src="../images/logo-long.png" alt="HobbyIoT"></a>
+  <nav><a href="../#boards">Products</a><a href="../#legacy">Legacy</a><a href="https://github.com/hobbyiot">GitHub</a></nav>
+</div></header>
+<main class="wrap">
+  <p class="crumb"><a href="../">Home</a> / Earlier projects / HobbyIoT NET</p>
+  <section style="padding-top:24px">
+    <span class="badge b-arch">Archive</span>
+    <h2>HobbyIoT NET – MQTT-SN over 802.15.4</h2>
+    <p class="lead">A sensor and actuator network built on MQTT-SN (MQTT for Sensor Networks) over a 2.4 GHz 802.15.4 radio link. End devices measure and control parameters; a gateway translates their messages to MQTT.</p>
+
+    <div class="grid g2">
+      <figure><img loading="lazy" alt="MQTT-SN gateway PCB with parts" src="../images/mqttsn-gw-pcb.jpg"><figcaption>Gateway PCB (image from the GitHub repo)</figcaption></figure>
+      <figure><img loading="lazy" alt="Gateway state diagram" src="../images/mqttsn-gw-state.jpg"><figcaption>Gateway state diagram (image from the GitHub repo)</figcaption></figure>
+    </div>
+
+    <h3>Architecture</h3>
+    <div class="grid g3">
+      <div class="card"><h3>End devices</h3><p>MQTT-SN clients with an MRF24J40MA transceiver. Sensors connect over 1-wire or I²C; firmware is Arduino code.</p></div>
+      <div class="card"><h3>Gateway</h3><p>Arduino-based MQTT-SN gateway on an ESP12 NodeMCU with an MRF24J40MA. It speaks 802.15.4 to devices and MQTT over WiFi to the broker.</p></div>
+      <div class="card"><h3>Broker &amp; clients</h3><p>An MQTT broker (typically a Raspberry Pi) and any smartphone or computer as MQTT client.</p></div>
+    </div>
+
+    <h3 style="margin-top:40px">Source &amp; hardware</h3>
+    <ul>
+      <li><a href="https://github.com/sivanovbg/MQTT-SN_GW_802154_V1">MQTT-SN_GW_802154_V1</a> – gateway firmware (Alpha 1)</li>
+      <li><a href="https://github.com/sivanovbg/MQTT-SN_802.15.4_Client">MQTT-SN_802.15.4_Client</a> – actuator end device firmware</li>
+      <li><a href="https://github.com/sivanovbg/MQTT-SN_802.15.4_DeviceT1_THR_RLP">DeviceT1_THR_RLP</a> – sensor end device software</li>
+      <li><a href="https://circuitmaker.com/Projects/Details/sivanovbg/HIoTGWV1">Gateway board on CircuitMaker</a> · <a href="https://oshpark.com/shared_projects/sBSpwQuP">order at OSH Park</a></li>
+      <li><a href="https://circuitmaker.com/Projects/Details/sivanovbg/HIOTTHRV2-1">End device board on CircuitMaker</a></li>
+      <li><a href="http://mqtt.org/new/wp-content/uploads/2009/06/MQTT-SN_spec_v1.2.pdf">MQTT-SN specification v1.2 (PDF)</a></li>
+    </ul>
+
+    <h3 id="other" style="margin-top:40px">Other early projects</h3>
+    <p><b>HobbyIoT DEN</b> – an ESP8266 NodeMCU system for terrarium remote control and monitoring, using plain MQTT over WiFi.</p>
+
+    <h3 style="margin-top:40px">History</h3>
+    <ul class="timeline">
+      <li><b>Apr 2018</b> – project issues tracked on GitHub and a Slack channel for collaboration.</li>
+      <li><b>May 2018</b> – "MQTT-SN 802.15.4 Net" renamed HobbyIoT NET.</li>
+      <li><b>Jun 2018</b> – further HobbyIoT projects added.</li>
+    </ul>
+    <p style="color:var(--muted)">These projects are kept for reference and are no longer actively developed. Current work is on <a href="../#boards">H2S-Dev and H3S-Dev</a>.</p>
+  </section>
+</main>
+<footer><div class="wrap"><div class="fl"><img src="../images/logo-circle.png" alt=""><div>© 2017–2026 HobbyIoT · MIT License</div></div><div><a href="../">Home</a></div></div></footer>
+</body>
+</html>

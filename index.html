@@ -1,36 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>HobbyIoT | Open Source Embedded Systems</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HobbyIoT – Open source LoRa &amp; IoT hardware</title>
+<meta name="description" content="HobbyIoT designs and shares open source IoT hardware: the H2S-Dev and H3S-Dev ESP32 LoRa boards, plus the MQTT-SN 802.15.4 network.">
+<meta property="og:title" content="HobbyIoT – Open source LoRa &amp; IoT hardware">
+<meta property="og:image" content="https://hobbyiot.net/images/h3s-social.jpg">
+<meta property="og:description" content="ESP32 LoRa dev boards for Meshtastic, Helium and custom IoT, designed in the open.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#0000ff">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="./"><img src="images/logo-long.png" alt="HobbyIoT"></a>
+  <nav>
+    <a href="#boards">Products</a>
+    <a href="#legacy">Legacy</a>
+    <a href="#community">Community</a>
+    <a href="https://github.com/hobbyiot">GitHub</a>
+  </nav>
+</div></header>
 
-<header>
-    <div class="logo">HobbyIoT</div>
-    <nav>
-        <a href="mission.html">Mission</a>
-        <a href="value.html">Value</a>
-        <a href="projects.html">Projects</a>
-        <a href="join.html">Join Us</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+<main>
+<section class="hero"><div class="wrap"><div class="txt">
+  <h1>Open source hardware for <span>long-range IoT</span></h1>
+  <p>ESP32 + LoRa boards for Meshtastic, Helium and your own sensor networks. Schematics, firmware and layouts are public. Boards are available if you'd rather not solder your own.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://www.elecrow.com/store/HobbyIoT">Buy H2S-Dev</a>
+    <a class="btn" href="https://github.com/hobbyiot">Browse the repos</a>
+    <a class="btn" href="https://www.patreon.com/HobbyIoT">Support on Patreon</a>
+  </div>
+  </div>
+  <img class="mark" src="images/logo-circle.png" alt="HobbyIoT logo">
+</div></section>
 
-<div class="container">
-    <h1>Open Source Hardware & Embedded Innovation</h1>
-    <p>
-        Professional-grade embedded systems developed transparently,
-        documented completely, and shared openly.
-    </p>
-    <a href="projects.html" class="button">Explore Projects</a>
-</div>
+<section id="boards"><div class="wrap">
+  <h2>Open source LoRa development boards</h2>
+  <p class="lead">Two generations of the same idea: a compact, hackable LoRa node with room to add your own sensors.</p>
+  <div class="board-block" id="h2s-dev">
+    <article class="card row">
+      <img class="hero-img" loading="lazy" alt="H2S-Dev V1.2 board, angled view" src="images/h2s-dev-1.jpg">
+      <div class="body">
+      <h3>H2S-Dev V1.2</h3>
+      <p>Ready-to-use, open source, Arduino-compatible ESP32 LoRa board for Meshtastic, Helium and other LoRa applications. Aimed at makers and hobbyists.</p>
+      <div class="specs"><span>ESP32-WROOM-32UE</span><span>LoRa SX1276 · 868 / 915 MHz</span><span>2× I²C (Crowtail)</span><span>USB-C (power only)</span><span>Programming via header (external programmer)</span><span>LiPo charging</span><span>Optional GNSS (Full variant)</span></div>
+      <div class="btns">
+        <a class="btn primary" href="https://www.elecrow.com/helium-iot-network-sensor-development-board-h2s-dev-v1-2-basic.html">Buy at Elecrow</a>
+        <a class="btn" href="https://github.com/hobbyiot/HELIUM-SENSORS/tree/main/H2S-Dev%20V1.2">Docs &amp; code</a>
+        <a class="btn" href="https://github.com/hobbyiot/LoRa-Nodes/tree/main/Meshtastic">Meshtastic firmware</a>
+      </div>
+      </div>
+    </article>
+  <h3 style="margin:28px 0 14px">H2S-Dev V1.2 in pictures</h3>
+  <div class="grid g4">
+    <figure><img loading="lazy" alt="H2S-Dev V1.2 top view" src="images/h2s-dev-5.jpg"><figcaption>Top view</figcaption></figure>
+    <figure><img loading="lazy" alt="H2S-Dev V1.2 with LoRa antenna attached" src="images/h2s-dev-4.jpg"><figcaption>With the LoRa antenna attached</figcaption></figure>
+    <figure><img loading="lazy" alt="H2S-Dev V1.2 bottom view" src="images/h2s-dev-3.jpg"><figcaption>Bottom view</figcaption></figure>
+    <figure><img loading="lazy" alt="H2S-Dev V1.2 bottom, angled" src="images/h2s-dev-2.jpg"><figcaption>Underside, angled</figcaption></figure>
+  </div>
+  <figure class="wide"><img loading="lazy" alt="H2S-Dev V1.2 key parts: LoRa SX1276, ESP32-WROOM-32UE, optional GNSS, USB-C (power only), LiPo charging, programming header, two I2C ports, soldering area, status LEDs" src="images/h2s-features.jpg"><figcaption>H2S-Dev V1.2 key features</figcaption></figure>
+  </div>
 
-<footer>
-© 2026 HobbyIoT | Open Hardware Ecosystem
-</footer>
+  <div class="board-block" id="h3s-dev">
+    <article class="card row">
+      <img class="hero-img cover" loading="lazy" alt="H3S-Dev V1 prototype with LoRa antenna attached" src="images/h3s-card-photo.jpg">
+      <div class="body">
+      <h3>H3S-Dev V1</h3>
+      <p>The successor to H2S-Dev: ESP32-S3 with a more capable radio, built-in GNSS and a credit-card-sized layout using the Raspberry Pi footprint.</p>
+      <div class="specs"><span>ESP32-S3</span><span>LoRa SX1262 with PA</span><span>GNSS</span><span>I²C</span><span>USB-C: power &amp; programming</span><span>No external programmer needed</span><span>LiPo charging</span><span>LEDs &amp; soldering area</span></div>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/hobbyiot/H3S-Dev-V1">Follow on GitHub</a>
+        <a class="btn" href="https://www.youtube.com/@hobbyiot">Watch the video</a>
+      </div>
+      </div>
+    </article>
+  <h3 style="margin:28px 0 14px">H3S-Dev V1 in pictures</h3>
+  <div class="grid g4 pics">
+    <figure><img loading="lazy" alt="H3S-Dev V1 prototype close-up with LoRa antenna and USB-C cable" src="images/h3s-photo-closeup.jpg"><figcaption>The V1 prototype, powered over USB-C</figcaption></figure>
+    <figure><img loading="lazy" alt="H3S-Dev V1 prototype on the bench with LoRa antenna" src="images/h3s-photo-bench.jpg"><figcaption>On the bench with the LoRa antenna attached</figcaption></figure>
+    <figure><img loading="lazy" alt="H3S-Dev V1 angled 3D render" src="images/h3s-card.jpg"><figcaption>Angled view (3D render)</figcaption></figure>
+    <figure><img loading="lazy" alt="H3S-Dev V1 top view render" src="images/h3s-top.jpg"><figcaption>Top view (3D render)</figcaption></figure>
+  </div>
+  <figure class="wide"><img loading="lazy" alt="H3S-Dev V1 key features: LoRa SX1262 with PA, ESP32-S3, GNSS, USB-C, LiPo charging, second power input, two I2C ports, soldering area, status LEDs" src="images/h3s-features.jpg"><figcaption>H3S-Dev V1 key features</figcaption></figure>
+  </div>
+</div></section>
 
+<section class="alt"><div class="wrap">
+  <h2>Built with PCBWay</h2>
+  <div class="sponsor">
+    <div class="pill">PCBWay</div>
+    <p>The H2S-Dev and H3S-Dev prototype PCBs were manufactured from free samples sponsored by PCBWay. Thank you for supporting open hardware.</p>
+    <a class="btn" href="https://www.pcbway.com/project/shareproject/W679551AS2Y1_FAB_H2S_Dev_V1_2_001_A_1_d6e6af34.html">H2S-Dev on PCBWay</a>
+  </div>
+</div></section>
+
+<section id="legacy"><div class="wrap">
+  <h2>Earlier projects</h2>
+  <p class="lead">Where HobbyIoT started: low-power sensor networks with MQTT-SN.</p>
+  <div class="grid g3">
+    <article class="card">
+      <span class="badge b-arch">Archive</span>
+      <h3>HobbyIoT NET</h3>
+      <p>MQTT-SN over 2.4 GHz 802.15.4. End devices talk to a gateway that bridges to MQTT over WiFi.</p>
+      <div class="btns"><a class="btn" href="projects/mqtt-sn.html">Read more</a></div>
+    </article>
+    <article class="card">
+      <span class="badge b-arch">Archive</span>
+      <img class="shot" loading="lazy" alt="MQTT-SN gateway PCB with parts" src="images/mqttsn-gw-pcb.jpg">
+      <h3>MQTT-SN Gateway</h3>
+      <p>MRF24J40 radio and ESP8266 NodeMCU, Arduino firmware, MIT licensed.</p>
+      <div class="btns"><a class="btn" href="https://github.com/sivanovbg/MQTT-SN_GW_802154_V1">GitHub</a></div>
+    </article>
+    <article class="card">
+      <span class="badge b-arch">Archive</span>
+      <h3>HobbyIoT DEN</h3>
+      <p>ESP8266 NodeMCU terrarium monitoring and control over plain MQTT on WiFi.</p>
+      <div class="btns"><a class="btn" href="projects/mqtt-sn.html#other">Details</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="community" class="alt"><div class="wrap">
+  <h2>Follow &amp; support</h2>
+  <p class="lead">Everything here is MIT-licensed and free to use. If it saves you time, there are a few ways to help it continue.</p>
+  <div class="grid g3">
+    <article class="card"><h3>YouTube</h3><p>Build logs, launches and shorts.</p><div class="btns"><a class="btn" href="https://www.youtube.com/@hobbyiot">Channel</a></div></article>
+    <article class="card"><h3>Patreon</h3><p>News, articles and member discussions on Discord.</p><div class="btns"><a class="btn" href="https://www.patreon.com/HobbyIoT">Join</a></div></article>
+    <article class="card"><img class="coffee-logo" src="images/logo-coffee-long.png" alt="CoffeeIoT"><h3>Buy Me a Coffee</h3><p>A one-off tip for the projects.</p><div class="btns"><a class="btn" href="https://buymeacoffee.com/hobbyiot">Say thanks</a></div></article>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fl"><img src="images/logo-circle.png" alt=""><div>© 2017–2026 HobbyIoT · Open source under the MIT License · <a href="mailto:support@hobbyiot.net">support@hobbyiot.net</a></div></div>
+  <div>
+    <a href="https://github.com/hobbyiot">GitHub</a>
+    <a href="https://x.com/HobbyIoT">X</a>
+    <a href="https://www.linkedin.com/company/hobbyiot">LinkedIn</a>
+    <a href="https://www.elecrow.com/store/HobbyIoT">Shop</a>
+  </div>
+</div></footer>
 </body>
 </html>
